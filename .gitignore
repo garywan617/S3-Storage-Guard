@@ -4,6 +4,9 @@
 node_modules
 dist
 
+# zip files
+*.zip
+
 # CDK asset staging directory
 .cdk.staging
 cdk.out

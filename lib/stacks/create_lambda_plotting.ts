@@ -21,7 +21,7 @@ export class CreateLambdaPlotting extends cdk.Stack {
     super(scope, id, props);
 
     const bucket = s3.Bucket.fromBucketName(this, "codebucket", 
-      "cs6620-cdk-hw4-store-lambdacode0408")
+      "cdk-store-lambda-code-0413")
     const trackBucketName =  props.s3BucketName
     //const trackBucket = s3.Bucket.fromBucketName(this, "TrackBucket", trackBucketName);
 

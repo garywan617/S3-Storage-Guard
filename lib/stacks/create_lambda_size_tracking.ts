@@ -21,7 +21,7 @@ export class CreateLambdaSizeTracking extends cdk.Stack {
     super(scope, id, props);
 
     const bucket = s3.Bucket.fromBucketName(this, "codebucket", 
-      "cs6620-cdk-hw4-store-lambdacode0408")
+      "cdk-store-lambda-code-0413")
 
     const func = new lambda.Function(this, 'sizeTrack', {
       functionName: "cdk_lambda_size_tracking",
