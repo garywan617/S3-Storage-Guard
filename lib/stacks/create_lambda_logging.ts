@@ -24,7 +24,7 @@ export class CreateLambdaLogging extends cdk.Stack {
     super(scope, id, props);
 
     const bucket = s3.Bucket.fromBucketName(this, "codebucket", 
-      "cs6620-cdk-hw4-store-lambdacode0408")
+      "cdk-store-lambda-code-0413")
 
     const func = new lambda.Function(this, 'logging', {
       functionName: "cdk_lambda_logging",
@@ -65,7 +65,7 @@ export class CreateLambdaLogging extends cdk.Stack {
       functionName: 'cdk_lambda_cleaner',
       runtime: lambda.Runtime.PYTHON_3_13,
       handler: 'lambda_function.lambda_handler',
-      code: lambda.Code.fromBucket(bucket, "cleaner_lambda.zip", "xF_uADegBtmi_y9DiWRpD9Szi5KoOsD1"),
+      code: lambda.Code.fromBucket(bucket, "cleaner_lambda.zip"),
       environment: {'BUCKET_NAME': props.s3BucketName,},
       
       timeout: cdk.Duration.seconds(10),
@@ -101,7 +101,7 @@ export class CreateLambdaLogging extends cdk.Stack {
 
     // 1. Define metric
   const sizeDeltaMetric = new cloudwatch.Metric({
-    namespace: 'Assignment4App',
+    namespace: 'GuardApp',
     metricName: 'TotalObjectSize',
     statistic: 'Sum',
     period: cdk.Duration.seconds(10),

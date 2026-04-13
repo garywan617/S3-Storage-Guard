@@ -79,4 +79,4 @@ def plot_data(data, max_size):
 
     # Specify the S3 bucket name and the file name (you can use any unique name for the file)
     # store the plotting to a different bucket
-    s3.upload_fileobj(img_data, "cs6620-cdk-hw4-store-lambdacode0408", "plot.png")
+    s3.upload_fileobj(img_data, "cdk-store-lambda-code-0413", "plot.png")

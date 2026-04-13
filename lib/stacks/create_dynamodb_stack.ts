@@ -11,7 +11,7 @@ export class CreateDynamodbStack extends cdk.Stack {
     super(scope, id, props);
 
     const table = new dynamodb.Table(this, 'MyTable', {
-      tableName: 'cs6620-cdktable0409',
+      tableName: 'cdktable0413',
       partitionKey: {
           name: 'bucket',
           type: dynamodb.AttributeType.STRING

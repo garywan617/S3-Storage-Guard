@@ -19,7 +19,7 @@ export class CreateLambdaDriver extends cdk.Stack {
     
     // an s3 bucket to store the lambda handler
     const bucket = s3.Bucket.fromBucketName(this, "codebucket", 
-      "cs6620-cdk-hw4-store-lambdacode0408")
+      "cdk-store-lambda-code-0413")
 
     const func = new lambda.Function(this, 'driver', {
       functionName: "cdk_lambda_driver",

@@ -19,7 +19,7 @@ export class CreateS3BucketStack extends cdk.Stack {
 
     // create an s3 bucket
     const bucket = new s3.Bucket(this, 'MyBucket', {
-      bucketName: 'cs6620-cdkbucket0408',
+      bucketName: 'cdk-store-bucket-0413',
       removalPolicy: cdk.RemovalPolicy.DESTROY,
       autoDeleteObjects: true,
     });
@@ -28,8 +28,8 @@ export class CreateS3BucketStack extends cdk.Stack {
     this.s3BucketName = bucket.bucketName
 
     // create sns topic
-    const topic = new sns.Topic(this, 'HW4Topic', {
-      topicName: "HW4Topic",
+    const topic = new sns.Topic(this, 'GuardTopic', {
+      topicName: "GuardTopic",
     });
 
     // Set up an S3 event notification to trigger the Lambda function
